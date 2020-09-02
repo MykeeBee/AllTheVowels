@@ -17,12 +17,11 @@ namespace AllTheVowels
             foreach (var word in currentWordList)
             {
                 const string vowels = "aeiou";
-                var originalWord = word;
                 var wordWithOnlyVowels = new string(word.Where(w => vowels.Contains(w)).ToArray());
 
                 if (wordWithOnlyVowels == vowels)
                 {
-                    newWordList.Add(originalWord);
+                    newWordList.Add(word);
                 }
             }
 
